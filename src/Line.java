@@ -1,13 +1,15 @@
 public class Line {
-    int x1,y1,x2,y2;
-    public Line(int x1, int y1, int x2, int y2) {
-        this.x1= x1;
-        this.y1= y1;
-        this.x2= x2;
-        this.y2= y2;
+    Point p1;
+    Point p2;
+    double length;
+
+    Line(Point p1, Point p2) {
+        this.p1 = p1;
+        this.p2 = p2;
     }
-    public void getLength() {
-        double lineLength= Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
-        System.out.println("Line length: "+lineLength);
+
+    public void calculateLength() {
+        this.length = Math.sqrt(Math.pow(p2.x-p1.x,2)+Math.pow(p2.y-p1.y,2));
+        System.out.println("The length of the line is: " + this.length);
     }
 }
