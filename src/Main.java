@@ -8,11 +8,12 @@ public class Main {
         l1.calculateLength();
         Line l2=new Line(m1.getPoint(),m1.getPoint());
         l2.calculateLength();
-        if(l1.length==l2.length){
-            System.out.println("Line 1 and Line 2 are Equal");
-        }
-        else{
-            System.out.println("Line 1 and Line 2 are not equal");
+        if(l1.length>l2.length){
+            System.out.println("Line 1 is greater than Line 2");
+        } else if (l1.length<l2.length) {
+            System.out.println("Line 1 is smaller than Line 2");
+        } else{
+            System.out.println("Line 1 and Line 2 are equal");
         }
     }
     public Point getPoint() {
